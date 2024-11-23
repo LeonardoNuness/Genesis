@@ -52,7 +52,7 @@ class _UpdateState extends State<Update> {
       final palestrante = _palestranteController.text;
       final maxAlunos = _maxAlunosController.text;
 
-      final url = 'http://localhost:8080/apiEvento/update/$id';
+      final url = 'http://localhost:8080/apiEvento/update/${id}';
       final body = json.encode({
         'id': id,
         'nome': nome,

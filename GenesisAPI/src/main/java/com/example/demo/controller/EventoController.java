@@ -33,8 +33,8 @@ public class EventoController {
         return eventoRepo.save(evento);
     }
 
-    @PutMapping ("/update")
-    public Evento update (@RequestBody Evento evento)
+    @PutMapping ("/update/{id}")
+    public Evento update (@RequestBody Evento evento, @PathVariable("id") String id)
     {
         if(!eventoRepo.existsById(evento.getId())) {
             throw new BadRequestException("id não encontrada");
